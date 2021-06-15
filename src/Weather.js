@@ -1,67 +1,96 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Weather.css";
-import Search from "./Search.js";
 import axios from "axios";
 
-export default function Weather() {
-  let weatherData = {
-    city: "New York",
-    temperature: 19,
-    date: "Tuesday 10:00",
-    description: "Cloudy",
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-    humidity: 80,
-    wind: 10
-  };
+export default function Weather(props) {
+  const [city, setCity] = useState(props.defaultCity);
+  const [weather, setWeather] = useState("");
 
-  return (
-    <div className="weather">
-        <Search />
-      <hr />
-      <h1>{weatherData.city}</h1>
-      <ul>
-        <li>
-          Last updated: {weatherData.date} <span id="date-time"></span>
-        </li>
-        <li>{weatherData.description}</li>
-      </ul>
-      <div className="row">
-        <div className="col-6">
-          <div className="clearfix">
-            <img
-              src={weatherData.imgUrl}
-              alt={weatherData.description}
-              className="float-left"
-            />
-            <div className="float-left">
-              <strong>{weatherData.temperature}</strong>
-              <span className="units">
-                <a href="/">°C</a> | <a href="/">°F</a>
-              </span>
+
+function displayWeather(response){
+setWeather({
+  temperature: Math.round(response.data.main.temp),
+  wind: response.data.wind.speed,
+  humidity: Math.round(response.data.main.humidity),
+  description: response.data.weather[0].description,
+  date: new Date(response.data.dt * 1000),
+  Coordinates: response.data.coord,
+});
+}
+
+function handleSubmit(event){
+  event.preventDefault();
+  let apiKey = "094780c710fa4efd669f0df8c3991927";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayWeather);
+}
+
+function retrievePosition(position){
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiKey = "094780c710fa4efd669f0df8c3991927";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayWeather);
+}
+
+
+function handleInput(event){
+setCity(event.target.value);
+}
+
+function getPositionFromDevice(event){
+    navigator.geolocation.getCurrentPosition(retrievePosition);
+}
+
+if (weather.loaded === true) {
+    return (
+      <div className="Weather">
+        <div className="container-app container-sm">
+          <div className="row">
+            <div className="container-current-temperature">
+              <div className="Search">
+                <div className="search-engine">
+                  <form onSubmit={handleSubmit} className="search-city">
+                    <div className="row align-items-center  gx-0">
+                      <div className="col-sm py-1 px-1">
+                        <input
+                          type="text"
+                          className="btn btn-light city-text"
+                          placeholder="select city 🌍"
+                          onChange={handleInput}
+                        />
+                      </div>
+                      <div className="col-sm py-1 px-1">
+                        <input
+                          type="submit"
+                          className="btn btn-light submit-button"
+                          value="    Search 🔎    "
+                        />
+                      </div>
+                      <div className="col-sm py-1 px-1">
+                        <button
+                          type="button"
+                          onClick={getPositionFromDevice}
+                          className="btn btn-light location-button"
+                        >
+                          {" "}
+                          My Location 📍{" "}
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <WeatherInfo data={weather} />
             </div>
+            <WeatherForecast coordinates={weather.coordinates} />
           </div>
         </div>
-        <div className="col-6">
-          <ul>
-            <li> Feels Like: 10℃</li>
-            <li> Humidity: {weatherData.humidity}</li>
-            <li> Wind: {weatherData.wind} km/h</li>
-          </ul>
-        </div>
-        <p class="githubLink">
-          <small>
-            This project was coded by Hulda Palsdottir and is{" "}
-            <a
-              class="gitHub"
-              href="https://github.com/huldapals/Weather-App-Project"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open-Sourced on GitHub
-            </a>
-          </small>
-        </p>
       </div>
-    </div>
-  );
+    );
+  } else {
+    search();
+    return "Loading";
+  }
 }
