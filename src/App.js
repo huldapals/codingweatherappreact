@@ -16,7 +16,7 @@ export default function App() {
           >
             Open-Source Code
           </a>
-          &nbsp;by Hulda Palsdottir
+          &nbsp;by Hulda Palsdottir HELLO
         </div>
       </div>
     </div>
