@@ -1,6 +1,7 @@
 import React from "react";
 import "./Weather.css";
 import Search from "./Search.js";
+import axios from "axios";
 
 export default function Weather() {
   let weatherData = {
