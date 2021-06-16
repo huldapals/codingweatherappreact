@@ -51,13 +51,14 @@ if (weather.loaded === true) {
             <div className="container-current-temperature">
               <div className="Search">
                 <div className="search-engine">
-                  <form onSubmit={handleSubmit} className="search-city">
+                  <form onSubmit={handleSubmit} 
+                        className="search-city">
                     <div className="row align-items-center  gx-0">
                       <div className="col-sm py-1 px-1">
                         <input
                           type="text"
                           className="btn btn-light city-text"
-                          placeholder="select city 🌍"
+                          placeholder="select a city"
                           onChange={handleInput}
                         />
                       </div>
@@ -75,7 +76,7 @@ if (weather.loaded === true) {
                           className="btn btn-light location-button"
                         >
                           {" "}
-                          My Location 📍{" "}
+                          My Location{" "}
                         </button>
                       </div>
                     </div>
