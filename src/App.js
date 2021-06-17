@@ -1,6 +1,5 @@
-import "./app.css";
+import "./App.css";
 import Weather from "./Weather.js";
-
 export default function App() {
   return (
     <div className="App">
@@ -16,7 +15,7 @@ export default function App() {
           >
             Open-Source Code
           </a>
-          &nbsp;by Hulda Palsdottir HELLO
+          &nbsp;by Hulda Palsdottir 
         </div>
       </div>
     </div>
