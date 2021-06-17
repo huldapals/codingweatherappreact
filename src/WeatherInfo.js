@@ -20,15 +20,20 @@ export default function(props){
                 </div>
                 <div className="col-sm-5">
                     <ul>
-                        <li>
-                            
-                        </li>   
+                        <li> 
+                            <strong>Conditions:&nbsp;</strong>
+                            <span className="description">{props.data.description}</span>
+                        </li>
+                        <li> 
+                            <strong>Wind:&nbsp;</strong>
+                            <span className="wind">{props.data.wind}&nbsp;km/h</span></li>
+                        <li> '
+                            <strong>Humidity:&nbsp;</strong>
+                            <span className="humidity">{props.data.humidity}&nbsp;%</span></li>
                     </ul>    
                 </div>
             </div>
-
         </div>
-
-        </div>
+    </div>
     )
 }
