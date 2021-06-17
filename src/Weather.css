@@ -1,14 +1,12 @@
 .container-app {
-  max-width: 550px;
+  max-width: 500px;
   text-align: center;
   display: block;
-  margin: 20px auto 0px;
-  padding: 0px 0px 0px;
-  border-color: rgb(59, 59, 59);
+  margin: 40px;
+  padding: 50px;
   border-style: 1px solid;
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: 0 30px 50px rgb(65 50 100 / 20%);
-  background-color: #fafafa;
 }
 
 .github-repository {
@@ -24,27 +22,27 @@
   position: relative;
   left: -16px;
   margin: 0px 10px;
-  font-family: "Staatliches", cursive;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  color: black;
 }
 
-@media (max-width: 480px) {
-  .weather-forecast canvas {
-    height: 36px;
-    position: relative;
-    right: 0px;
-  }
+.weather-forecast canvas {
+  height: 36px;
+  position: relative;
+  right: 0px;
+}
 
-  .units {
-    position: relative;
-    right: 20px;
-  }
+.units {
+  position: relative;
+  right: 20px;
+}
 
-  .container-app {
-    margin: 0px;
-  }
-  .container-current-temperature {
-    padding: 0px;
-  }
+.container-app {
+  margin: 0px;
+}
+.container-current-temperature {
+  padding: 0px;
 }
 
 /*searchcss*/
@@ -58,7 +56,7 @@
 }
 
 .city-text {
-  border: 1px solid #a14016;
+  border: 1px solid #ff88f9;
   border-radius: 50px;
   font-size: smaller;
 }
@@ -67,16 +65,10 @@
   opacity: 0.4;
 }
 
-.city-text:hover {
-  background-color: #eeeeee;
-  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
-  background-color: #f8f9fa;
-}
-
 .submit-button {
-  background-color: #da5a37;
+  background-color: #000000;
   box-shadow: 0 20px 40px rgb(65 50 100 / 10%);
-  border: 1px solid #da5a37;
+  border: 1px solid #000000;
   border-radius: 50px;
   font-size: smaller;
   color: #fafafa;
@@ -85,60 +77,57 @@
 }
 
 .submit-button:hover {
-  background-color: #a14016;
-  border: 1px solid #da5a37;
+  background-color: #000000;
+  border: 1px solid #000000;
   color: #fafafa;
-  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 24px;
 }
 
 .location-button {
   box-shadow: 0 20px 40px rgb(65 50 100 / 10%);
-  background-color: #da5a37;
-  border: 1px solid #da5a37;
+  background-color: #000000;
+  border: 1px solid #000000;
   border-radius: 50px;
   font-size: smaller;
   color: #fafafa;
 }
 
 .location-button:hover {
-  background-color: #a14016;
-  border: 1px solid #a14016;
+  background-color: #000000;
+  border: 1px solid #000000;
   color: #fafafa;
   box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
-}
-
-@media (max-width: 480px) {
 }
 
 /*datacss*/
 
 h1 {
-  color: #577e89;
+  color: #000000;
   text-transform: uppercase;
-  font-family: "Staatliches", cursive;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
   font-size: 70px;
   padding: 10px 0px 0px 0px;
   margin: 5px 0px 0px 0px;
   line-height: 0.8;
 }
 h2 {
-  color: #6f9f9c;
+  color: #000000;
   font-size: 15px;
   margin: 0px 0px 10px 0px;
-  font-family: "Staatliches", cursive;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
   opacity: 0.5;
 }
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 50px;
-  }
+h1 {
+  font-size: 50px;
 }
 
 /*currentweathercss*/
 
 a {
-  color: #577e89;
+  color: #000000;
   text-decoration: underline;
   text-decoration-thickness: 0.08em;
 }
@@ -160,8 +149,9 @@ li {
 .currentTemperature {
   font-style: bold;
   font-size: 70px;
-  font-family: "Open Sans Condensed", sans-serif;
-  color: #577e89;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  color: #000000;
 }
 canvas {
   position: relative;
@@ -173,7 +163,8 @@ canvas {
   left: -18px;
   top: -28px;
   font-size: 30px;
-  font-family: "Staatliches", cursive;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .container-current-temperature {
@@ -200,17 +191,15 @@ canvas {
   display: inline;
 }
 
-@media (max-width: 480px) {
-  .currentTemperature {
-    font-size: 50px;
-  }
-  .units {
-    font-size: 25px;
-  }
-  ul {
-    padding: 0px;
-  }
-  li {
-    text-align: center;
-  }
+.currentTemperature {
+  font-size: 50px;
+}
+.units {
+  font-size: 25px;
+}
+ul {
+  padding: 0px;
+}
+li {
+  text-align: center;
 }
