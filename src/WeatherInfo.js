@@ -3,19 +3,19 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 
-export default function(props){
+export default function WeatherInfo(props){
     return(
         <div className="WeatherInfo">
             <div className="Data">
                 <h1 className="City">{props.data.city}</h1>
-                <h2>Last Updated: <FormattedDate /></h2>
+                <h2>Last Updated: <FormattedDate date={props.data.date} /></h2>
             </div>
         <div className="CurrentWeather">
             <div className="row">
                 <div className="col-sm-7">
                     <div className="currentTemperature">
-                        <WeatherTemperature />
-                        <WeatherIcon />
+                        <WeatherTemperature celsius={props.data.temperature} />
+                        <WeatherIcon code={props.data.icon}/>
                     </div>
                 </div>
                 <div className="col-sm-5">

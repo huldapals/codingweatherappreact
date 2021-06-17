@@ -3,13 +3,17 @@ import "./Weather.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast.js";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weather, setWeather] = useState({ ready: false });
-  function displayWeather(response) {
+
+   function displayWeather(response) {
     setWeather({
+      ready: true,
       temperature: Math.round(response.data.main.temp),
       humidity: Math.round(response.data.main.humidity),
       description: response.data.weather[0].description,
@@ -18,7 +22,6 @@ export default function Weather(props) {
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       coordinates: response.data.coord,
-      loaded: true
     });
   }
   function search() {
@@ -46,7 +49,7 @@ export default function Weather(props) {
   }
   if (weather.ready) {
     return (
-      <div className="Weather">
+      <div className="Weather"> 
         <div className="container-app container-sm">
           <div className="row">
             <div className="container-current-temperature">

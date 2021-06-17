@@ -1,68 +1,216 @@
-.Weather {
-  padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
-}
-
-.Weather .overview {
-  margin-bottom: 20px;
-}
-
-.Weather .weather-temperature img {
-  margin-right: 5px;
-  height: 64px;
-  width: 64px;
-}
-
-.Weather .weather-temperature strong {
-  color: rgb(33, 33, 33);
-  font-size: 65px;
-  line-height: 1;
-  font-weight: 400;
-}
-
-.Weather .weather-temperature .units {
-  position: relative;
-  font-size: 16px;
-  top: -34px;
-}
-
-.Weather .weather-temperature .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-}
-
-.Weather .weather-temperature .active:hover {
-  text-decoration: none;
-}
-
-.Weather .weather-forecast {
-  margin-top: 10px;
-}
-
-.Weather .weather-forecast h3 {
-  color: rgb(186, 186, 186);
-  font-size: 14px;
-  font-weight: 400;
+.container-app {
+  max-width: 550px;
   text-align: center;
-  height: 15px;
-  line-height: 15px;
-  padding-top: 7px;
-}
-
-.Weather .weather-forecast img {
   display: block;
-  margin: 0 auto;
-  height: 48px;
-  width: 48px;
+  margin: 20px auto 0px;
+  padding: 0px 0px 0px;
+  border-color: rgb(59, 59, 59);
+  border-style: 1px solid;
+  border-radius: 10px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 20%);
+  background-color: #fafafa;
 }
 
-.Weather .weather-forecast-temperature {
+.github-repository {
+  padding: 30px;
   text-align: center;
-  color: rgb(135, 135, 135);
-  font-size: 13px;
-  font-weight: 400;
-  height: auto;
-  line-height: 15px;
-  white-space: nowrap;
+}
+
+.github-repository a:hover {
+  font-weight: bold;
+}
+
+.current-temperature {
+  position: relative;
+  left: -16px;
+  margin: 0px 10px;
+  font-family: "Staatliches", cursive;
+}
+
+@media (max-width: 480px) {
+  .weather-forecast canvas {
+    height: 36px;
+    position: relative;
+    right: 0px;
+  }
+
+  .units {
+    position: relative;
+    right: 20px;
+  }
+
+  .container-app {
+    margin: 0px;
+  }
+  .container-current-temperature {
+    padding: 0px;
+  }
+}
+
+/*searchcss*/
+
+.row {
+  max-width: 500px;
+  margin: 0px auto;
+}
+.btn {
+  line-height: 1.4em;
+}
+
+.city-text {
+  border: 1px solid #a14016;
+  border-radius: 50px;
+  font-size: smaller;
+}
+
+::placeholder {
+  opacity: 0.4;
+}
+
+.city-text:hover {
+  background-color: #eeeeee;
+  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+  background-color: #f8f9fa;
+}
+
+.submit-button {
+  background-color: #da5a37;
+  box-shadow: 0 20px 40px rgb(65 50 100 / 10%);
+  border: 1px solid #da5a37;
+  border-radius: 50px;
+  font-size: smaller;
+  color: #fafafa;
+  position: relative;
+  left: 3px;
+}
+
+.submit-button:hover {
+  background-color: #a14016;
+  border: 1px solid #da5a37;
+  color: #fafafa;
+  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+}
+
+.location-button {
+  box-shadow: 0 20px 40px rgb(65 50 100 / 10%);
+  background-color: #da5a37;
+  border: 1px solid #da5a37;
+  border-radius: 50px;
+  font-size: smaller;
+  color: #fafafa;
+}
+
+.location-button:hover {
+  background-color: #a14016;
+  border: 1px solid #a14016;
+  color: #fafafa;
+  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+}
+
+@media (max-width: 480px) {
+}
+
+/*datacss*/
+
+h1 {
+  color: #577e89;
+  text-transform: uppercase;
+  font-family: "Staatliches", cursive;
+  font-size: 70px;
+  padding: 10px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
+  line-height: 0.8;
+}
+h2 {
+  color: #6f9f9c;
+  font-size: 15px;
+  margin: 0px 0px 10px 0px;
+  font-family: "Staatliches", cursive;
+  opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+/*currentweathercss*/
+
+a {
+  color: #577e89;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+}
+a:hover {
+  color: #83c4d7;
+}
+ul {
+  list-style: none;
+  padding: 20px 0px 20px 0px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+li {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+.currentTemperature {
+  font-style: bold;
+  font-size: 70px;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #577e89;
+}
+canvas {
+  position: relative;
+  right: -20px;
+  top: 5px;
+}
+.units {
+  position: relative;
+  left: -18px;
+  top: -28px;
+  font-size: 30px;
+  font-family: "Staatliches", cursive;
+}
+
+.container-current-temperature {
+  display: block;
+  margin: 16px auto 0px;
+}
+.col-sm-7 {
+  padding: 0px;
+}
+
+.col-sm-5 {
+  font-size: smaller;
+  padding: 0px;
+}
+
+.description {
+  text-transform: capitalize;
+}
+.humidity {
+  display: inline;
+}
+
+.wind {
+  display: inline;
+}
+
+@media (max-width: 480px) {
+  .currentTemperature {
+    font-size: 50px;
+  }
+  .units {
+    font-size: 25px;
+  }
+  ul {
+    padding: 0px;
+  }
+  li {
+    text-align: center;
+  }
 }

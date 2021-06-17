@@ -1,0 +1,32 @@
+.weather-forecast {
+  max-width: 600px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.weather-forecast canvas {
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+.weather-forecast-day {
+  font-size: 18px;
+}
+
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.container-current-temperature {
+  display: block;
+  margin: 0px auto 0px;
+}
+
+.weather-forecast {
+  filter: grayscale(0.75);
+  padding-bottom: 20px;
+}
