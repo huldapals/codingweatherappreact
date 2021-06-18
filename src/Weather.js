@@ -61,7 +61,7 @@ export default function Weather(props) {
                         <input
                           type="text"
                           className="btn btn-light city-text"
-                          placeholder="select a city"
+                          placeholder="Type a city"
                           onChange={handleInput}
                         />
                       </div>
