@@ -106,7 +106,7 @@ h1 {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   font-size: 60px;
-  padding: 10px 0px 0px 0px;
+  padding: 20px;
   margin: 5px 0px 0px 0px;
   line-height: 0.8;
 }
@@ -147,7 +147,7 @@ li {
 }
 .currentTemperature {
   font-style: bold;
-  font-size: 70px;
+  font-size: 68px;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   color: #000000;
