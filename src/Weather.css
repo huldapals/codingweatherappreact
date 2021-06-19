@@ -12,10 +12,6 @@
   text-align: center;
 }
 
-.github-repository a:hover {
-  font-weight: bold;
-}
-
 .current-temperature {
   position: relative;
   left: -16px;
