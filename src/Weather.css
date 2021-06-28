@@ -1,6 +1,7 @@
 .container-app {
   text-align: center;
   display: block;
+  margin: 0 auto;
   padding: 50px;
   border-style: 1px solid;
   border-radius: 30px;
