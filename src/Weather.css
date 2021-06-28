@@ -1,7 +1,7 @@
 .container-app {
   text-align: center;
   display: block;
-  margin: 0 auto;
+  margin: 20px;
   padding: 50px;
   border-style: 1px solid;
   border-radius: 30px;
@@ -41,7 +41,6 @@
 /*searchcss*/
 
 .row {
-  max-width: 500px;
   margin: 0px auto;
 }
 .btn {
