@@ -30,11 +30,6 @@
   right: 0px;
 }
 
-.units {
-  position: relative;
-  right: 20px;
-}
-
 .container-current-temperature {
   padding: 0px;
 }
@@ -152,7 +147,7 @@ canvas {
   position: relative;
   left: -18px;
   top: -28px;
-  font-size: 30px;
+  font-size: 18px;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
