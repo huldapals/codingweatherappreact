@@ -19,7 +19,7 @@ if( unit === `celsius`) {
     </span>
   );
   } else {
-    let F = (props.celsius * 9/5) + 32 
+    let F = Math.round((props.celsius * 9/5) + 32) 
     return (
     <span>
       <span className="current-temperature">{F}</span>
