@@ -17,7 +17,7 @@
 
 .current-temperature {
   position: relative;
-  left: -16px;
+  left: -10px;
   margin: 0px 10px;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -114,10 +114,6 @@ h2 {
   opacity: 0.5;
 }
 
-h1 {
-  font-size: 50px;
-}
-
 /*currentweathercss*/
 
 a {
@@ -149,7 +145,7 @@ li {
 }
 canvas {
   position: relative;
-  right: -20px;
+  right: -5px;
   top: 5px;
 }
 .units {
@@ -185,9 +181,6 @@ canvas {
   display: inline;
 }
 
-.currentTemperature {
-  font-size: 70px;
-}
 .units {
   font-size: 25px;
 }
