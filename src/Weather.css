@@ -145,7 +145,7 @@ li {
 }
 canvas {
   position: relative;
-  right: -5px;
+  right: 3px;
   top: 5px;
 }
 .units {
@@ -183,10 +183,4 @@ canvas {
 
 .units {
   font-size: 25px;
-}
-ul {
-  padding: 0px;
-}
-li {
-  text-align: center;
 }
